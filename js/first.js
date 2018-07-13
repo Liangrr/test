@@ -17,7 +17,8 @@
 						
 						mb.style.display = 'block';
 						qr.onclick = function(){
-							
+							target.parentNode.remove()
+							mb.style.display = 'none';
 						}
 						qx.onclick = function(){
 							mb.style.display = 'none';
