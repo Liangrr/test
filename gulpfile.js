@@ -11,7 +11,13 @@ gulp.task('sass', function () {
       .pipe(gulp.dest('css'))
   });
 
-gulp.task('ab',function(){
-	console.log('asdsad')
+gulp.task('cssmin', function() {
+	return gulp.src('css/*.css')
+	.pipe(cssmin())
+	.pipe(gulp.dest('dist'));
+});
+gulp.task('uglify', function() {
+	return gulp.src("js/*.js")
+	.pipe(uglify())
+	.pipe(gulp.dest('dist'))
 })
-
